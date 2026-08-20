@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleDetection": "auto",
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "types": [],
+    "sourceMap": true,
+
+    "declaration": false,
+    "declarationMap": false,
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

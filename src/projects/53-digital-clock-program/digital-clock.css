@@ -1,0 +1,26 @@
+body {
+    background-image: url(https://cdn.audleytravel.com/2532/1808/79/1028541-ho-chi-minh-city-hall.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+#clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+#clock{
+    font-family: monospace;
+    font-size: 10rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(77, 211, 95);
+    backdrop-filter: blur(2px);
+    background-color: hsla(0, 0%, 100%, 0.1);
+    width: 100%;
+}

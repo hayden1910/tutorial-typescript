@@ -1,0 +1,25 @@
+   #countLabel {
+       display: block;
+       text-align: center;
+       font-size: 8cm;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+
+   #btnContainer {
+       text-align: center;
+   }
+
+   .buttons {
+       padding: 10px 20px;
+       font-size: 1.5em;
+       color: white;
+       background-color: rgb(40, 136, 245);
+       border-radius: 8px;
+       cursor: pointer;
+       transition: background-color 0.25s;
+   }
+
+   .buttons:hover {
+       background-color: rgba(40, 136, 245, 0.616);
+       ;
+   }

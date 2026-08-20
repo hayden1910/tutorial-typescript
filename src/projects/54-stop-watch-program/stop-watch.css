@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 90%);
+}
+
+#myH1 {
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(0, 0%, 25%);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border: 5px solid;
+    border-radius: 26px;
+    background-color: white;
+}
+
+#display {
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: hsl(0, 0%, 35%);
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
+    margin-bottom: 25px;
+}
+
+#controls button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    color: aliceblue;
+    transition: background-color 0.5s ease;
+}
+
+#startBtn {
+    background-color: lightblue;
+}
+
+#startBtn:hover {
+    background-color: blue;
+}
+
+#stopBtn {
+    background-color: lightpink;
+}
+
+#stopBtn:hover {
+    background-color: red;
+}
+
+#resetBtn {
+    background-color: lightgreen;
+}
+
+#resetBtn:hover {
+    background-color: green;
+}
