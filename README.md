@@ -54,22 +54,24 @@ npx tsc src/${module-name}/${sub-module-name}/${file-name} --ignoreConfig # buil
 | `npx tsx file.ts` | Full TS features, learning/debugging | ✅ Yes |
 | `npm run build` then `node file.js` | Production, deployment | ✅ Yes |
 
-generics, enums, type-guards, utility-types use `npx tsx`:
-```bash
-npx tsx src/functions/generics.ts
-npx tsx src/oop/generic-classes.ts
-npx tsx src/basics/enums-as-const.ts
-npx tsx src/functions/type-guards.ts
-npx tsx src/basics/utility-types.ts
-```
-
 ## Advanced TypeScript Modules
 
-Topics covered:
-- **Generics**: constraints (`extends`), defaults, multiple params, `Result<T,E>`, Factory pattern
-- **Enums vs `as const`**: numeric/string/const enums, modern union approach, Node compatibility
-- **Type Guards**: `typeof`/`instanceof`/`in`, custom predicates (`x is Type`), discriminated unions, assertion functions
-- **Utility Types**: `Partial`, `Required`, `Pick`, `Omit`, `Record`, `Readonly`, `Exclude`, `Extract`, `ReturnType`, `Parameters`, `Awaited`, plus combinations
+| Module | File | Topics |
+| --- | --- | --- |
+| **Generics (Functions)** | `src/functions/generics.ts` | Constraints, defaults, multiple params, `Result<T,E>`, Factory |
+| **Generics (Classes)** | `src/oop/generic-classes.ts` | Generic interfaces, `Cache<K,V>`, `Repository<T>`, `Box<T>` |
+| **Enums & `as const`** | `src/basics/enums-as-const.ts` | Numeric/string/const enums, modern union approach |
+| **Type Guards** | `src/functions/type-guards.ts` | `typeof`/`instanceof`/`in`, predicates, discriminated unions, assertions |
+| **Utility Types** | `src/basics/utility-types.ts` | `Partial`, `Pick`, `Omit`, `Record`, `Readonly`, `Exclude`, `Extract`, `ReturnType`, `Parameters`, `Awaited` |
+| **Type Operators** | `src/functions/type-operators.ts` | `keyof`, `typeof` (type position), `T[K]` indexed access, EventEmitter |
+| **Literal & Intersection** | `src/basics/literal-intersection.ts` | String/numeric/template literals, intersection `&`, branded types, discriminated unions |
+| **`satisfies` & `as const`** | `src/basics/satisfies-as-const.ts` | `satisfies` validation, literal preservation, excess property checking, form schemas |
+| **Advanced OOP** | `src/oop/advanced-oop.ts` | `abstract` classes, `implements`, `public`/`protected`/`private`, `readonly`, parameter properties, method overloads, `override`, `#private` fields |
+| **Index Signatures** | `src/basics/index-signatures.ts` | `[key: string]: T`, `Record<K,V>`, cache, config, event emitter, template literal keys |
+| **Mapped & Conditional Types** | `src/functions/mapped-conditional-types.ts` | `{ [K in keyof T]: ... }`, `T extends U ? X : Y`, `infer`, distributive conditionals, `DeepReadonly`, `DeepPartial` |
+| **Template Literal Types** | `src/basics/template-literal-types.ts` | `` `on${"Click" | "Change"}` ``, inference with `infer`, route params, CSS props, RBAC, branded types |
+| **Declaration Files** | `docs/declaration-files.md` | `.d.ts` structure, `declare module`, `declare global`, module augmentation, ambient declarations, triple-slash references |
+| **Advanced tsconfig** | `docs/advanced-tsconfig.md` | Strict flags explanation, `paths` alias, project references, `allowJs`/`checkJs`, environment configs |
 
 ## Tooling
 
