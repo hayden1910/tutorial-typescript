@@ -46,13 +46,30 @@ npm run watch      # recompile on every file save
 npx tsc src/${module-name}/${sub-module-name}/${file-name} --ignoreConfig # build for specific module
 ```
 
-### Running a `.ts` file with Node
+### Running TS files with different methods
 
-Node 24+ runs TypeScript directly (type stripping) — no build step needed:
+| Command | Use Case | Supports Parameter Properties / Enums |
+|---------|----------|----------------------------------------|
+| `node file.ts` | Quick test, simple files | ❌ No (type-stripping only) |
+| `npx tsx file.ts` | Full TS features, learning/debugging | ✅ Yes |
+| `npm run build` then `node file.js` | Production, deployment | ✅ Yes |
 
+generics, enums, type-guards, utility-types use `npx tsx`:
 ```bash
-node src/index.ts
+npx tsx src/functions/generics.ts
+npx tsx src/oop/generic-classes.ts
+npx tsx src/basics/enums-as-const.ts
+npx tsx src/functions/type-guards.ts
+npx tsx src/basics/utility-types.ts
 ```
+
+## Advanced TypeScript Modules
+
+Topics covered:
+- **Generics**: constraints (`extends`), defaults, multiple params, `Result<T,E>`, Factory pattern
+- **Enums vs `as const`**: numeric/string/const enums, modern union approach, Node compatibility
+- **Type Guards**: `typeof`/`instanceof`/`in`, custom predicates (`x is Type`), discriminated unions, assertion functions
+- **Utility Types**: `Partial`, `Required`, `Pick`, `Omit`, `Record`, `Readonly`, `Exclude`, `Extract`, `ReturnType`, `Parameters`, `Awaited`, plus combinations
 
 ## Tooling
 
